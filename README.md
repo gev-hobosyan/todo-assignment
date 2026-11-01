@@ -1,32 +1,52 @@
-# React + TypeScript + Vite
+# Todo Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Тестовое задание ZalogHub
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS 4**
+- **Lucide React**
 
-## React Compiler
+## Установка зависимостей
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Запуск проекта
+
+### Режим разработки
+Запускает сервер для разработки
+
+```bash
+npm run dev
+```
+
+Открыть веб-сайт можно по ссылке `http://localhost:5173`
+
+### Сборка проекта
+Для создания оптимизированной производственной сборки (production build): 
+
+```bash
+npm run build
+```
+
+## Структура проекта
+
+```
+src/
+├── components/
+│ ├── Button.tsx 				# Многоразовый компонент кнопки
+│ ├── FocusedButton.tsx 	# Кнопка с состоянием фокуса для фильтров
+│ └── Task.tsx 				# Компонент отдельного задания
+├── App.tsx 					# Основной компонент приложения
+├── main.tsx 					# Точка входа
+└── index.css 					# Глобальные стили с импортом Tailwind
+```
+
+## Потраченное время
+
+**Примерно потратил 40 мин**
